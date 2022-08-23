@@ -1,1 +1,1 @@
-print("Hola Mundo, Por Gerardo Espinoza Sanchez")
+print("Hola Mundo, Gerardo Espinoza Sanchez")
