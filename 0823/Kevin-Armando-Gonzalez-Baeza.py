@@ -1,1 +1,1 @@
-printf("hola soy Kevin Armando Gonzalez Baeza")
+print("hola soy Kevin Armando Gonzalez Baeza")
