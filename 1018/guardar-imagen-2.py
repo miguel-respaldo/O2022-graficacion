@@ -7,6 +7,7 @@ if not camara.isOpened():
     exit(1)
 
 contador = 1
+en_color = True
 while True:
     # Leemos la imagen de la camara
     ret, imagen = camara.read()
@@ -15,7 +16,11 @@ while True:
         print("No podemos capturar la imagen de la camara")
         break
 
-    cv.imshow("Camara", imagen)
+    if en_color:
+        cv.imshow("Camara", imagen)
+    else:
+        gris = cv.cvtColor(imagen, cv.COLOR_BGR2GRAY)
+        cv.imshow("Camara", gris)
 
     teclado = cv.waitKey(1)
     if teclado == 27:
@@ -23,8 +28,17 @@ while True:
     elif teclado == ord('g') or teclado == ord('G'):
         nombre = "imagen-{:05d}.png".format(contador)
         print(f"Guardando imagen {nombre}")
+        gris = cv.cvtColor(imagen, cv.COLOR_BGR2GRAY)
+        cv.imwrite(nombre,gris)
+        contador += 1
+    elif teclado == ord('c') or teclado == ord('C'):
+        nombre = "imagen-{:05d}.png".format(contador)
+        print(f"Guardando imagen {nombre}")
         cv.imwrite(nombre,imagen)
         contador += 1
+    elif teclado == ord('b') or teclado == ord('B'):
+        en_color = not en_color
+
 
 camara.release()
 cv.destroyAllWindows()
