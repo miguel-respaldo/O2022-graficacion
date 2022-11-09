@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+# vi: set shiftwidth=4 tabstop=8 expandtab:
+#
+# Nombre: Luis Isael Campos Luna
+# No. Control: 19011304
+# Calificación: XXX
 import cv2 as cv
 
 #mouseX,mouseY = (0,0)
