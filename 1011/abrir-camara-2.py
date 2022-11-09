@@ -18,8 +18,11 @@ while True:
     # 1 espejo
     # -1 cabeza espejo
 
-    cv.imshow("Camara flip", imagenflip)
+    cv.imshow("Camara flip", imagenflip) 
     cv.imshow("Camara", imagen)
+    gris = cv.cvtColor(imagen, cv.COLOR_BGR2HSV)#BGR2GRAY
+    cv.imshow("imagen", gris)
+    #cv.imwrite("imagen", filename)
 
 
     if cv.waitKey(1) == 27:
