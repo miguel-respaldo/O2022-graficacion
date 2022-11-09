@@ -1,5 +1,10 @@
-from inspect import modulesbyfile
-from msilib import MSIMODIFY_SEEK
+#!/usr/bin/env python3
+# vi: set shiftwidth=4 tabstop=8 expandtab:
+#
+# Nombre: Mauricio Basurto Jacobo
+# No. Control: 18011057
+# Calificación: XXX
+
 import cv2 as cv
 import numpy as np
 
