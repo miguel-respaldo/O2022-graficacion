@@ -1,1 +1,0 @@
-print("Hola Mundo mi nombre es Omar Israel Navarro Oliva")
